@@ -252,7 +252,7 @@ font:
       type: gfonts
       family: ${home_small_font_family}
       weight: ${home_small_font_weight}
-    size: 15
+    size: 20
     glyphsets:
       - ${font_glyphsets}
     extras:
