@@ -2769,7 +2769,7 @@ font:
       type: gfonts
       family: ${font_family}
       weight: 400
-    size: 20
+    size: 16
     glyphsets:
       - ${font_glyphsets}
     extras:
@@ -2784,7 +2784,7 @@ font:
       family: ${font_family}
       weight: 300
       italic: true
-    size: 20
+    size: 16
     glyphsets:
       - ${font_glyphsets}
     extras:
