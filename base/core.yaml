@@ -171,7 +171,7 @@ substitutions:
   alexa_sliding_window: '1'
   okay_nabu_probability_cutoff: '0.7'
   okay_nabu_sliding_window: '3'
-  hey_jarvis_probability_cutoff: '0.7'
+  hey_jarvis_probability_cutoff: '0.97'
   hey_jarvis_sliding_window: '3'
 
   # ---------------------------------------------------------------------------
@@ -789,8 +789,8 @@ micro_wake_word:
       id: mww_okay_nabu
       probability_cutoff: ${okay_nabu_probability_cutoff}
       sliding_window_size: ${okay_nabu_sliding_window}
-    - model: hey_jarvis
-      id: mww_hey_jarvis
+    - model: https://github.com/mikey60/Voice-Assistant-Customizations/raw/main/Files/hey_jarvis.json
+      id: hey_jarvis
       probability_cutoff: ${hey_jarvis_probability_cutoff}
       sliding_window_size: ${hey_jarvis_sliding_window}
   on_wake_word_detected:
