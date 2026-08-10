@@ -75,7 +75,7 @@ substitutions:
 
   # Media player volume clamps for the onboard speaker.
   volume_min: '0.5'
-  volume_max: '0.8'
+  volume_max: '0.99'
 
   # The timer alarm. Fetched at COMPILE time and baked into flash as a byte
   # array, so it needs no network at ring time and always comes out of the box's
