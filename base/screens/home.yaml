@@ -135,10 +135,12 @@ script:
                   if (!now.is_valid()) {
                     return std::string("--:--");
                   }
-                  char buf[8];
-                  snprintf(buf, sizeof(buf), "%2d:%2d", now.hour, now.minute);
-                  return std::string(buf);
-      # The date changes once a day, but this script runs on every minute
+                  int hour = now.hour % 12;
+                  if (hour == 0) hour = 12;
+                  const char *ampm = now.hour < 12 ? "AM" : "PM";
+                  char buf[10];
+                  snprintf(buf, sizeof(buf), "%d:%02d %s", hour, now.minute, ampm);
+                  return std::string(buf);      # The date changes once a day, but this script runs on every minute
       # boundary. lv_label_set_text never compares - it reallocs, copies and
       # re-lays-out the text - so this was 1439 pointless reflows a day.
       - if:
