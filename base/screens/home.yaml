@@ -137,8 +137,9 @@ script:
                   }
                   int hour = now.hour % 12;
                   if (hour == 0) hour = 12;
+                  const char *ampm = now.hour < 12 ? "AM" : "PM";
                   char buf[10];
-                  snprintf(buf, sizeof(buf), "%d:%02d", hour, now.minute);
+                  snprintf(buf, sizeof(buf), "%d:%02d %s", hour, now.minute, ampm);
                   return std::string(buf);      
       # The date changes once a day, but this script runs on every minute
       # boundary. lv_label_set_text never compares - it reallocs, copies and
@@ -248,7 +249,7 @@ font:
       family: ${home_clock_font_family}
       weight: ${home_clock_font_weight}
     size: ${home_clock_font_size}
-    glyphs: "0123456789:-"
+    glyphs: "0123456789:- AMP"
   - id: font_home_small
     file:
       type: gfonts
