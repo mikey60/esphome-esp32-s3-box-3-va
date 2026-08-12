@@ -136,7 +136,7 @@ script:
                     return std::string("--:--");
                   }
                   char buf[8];
-                  snprintf(buf, sizeof(buf), "%I:%M", now.hour, now.minute);
+                  snprintf(buf, sizeof(buf), "%2d:%2d", now.hour, now.minute);
                   return std::string(buf);
       # The date changes once a day, but this script runs on every minute
       # boundary. lv_label_set_text never compares - it reallocs, copies and
