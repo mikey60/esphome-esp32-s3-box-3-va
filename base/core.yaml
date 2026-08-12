@@ -393,7 +393,7 @@ esphome:
               lv_indev_set_gesture_min_velocity(indev, ${swipe_min_velocity});
               indev = lv_indev_get_next(indev);
             }
-        - light.turn_on
+        - light.turn_on:
             id: backlight
             brightness: 40%
     # Apply the restored mic gain. The template number restores its value and
